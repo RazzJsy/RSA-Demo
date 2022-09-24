@@ -1,0 +1,24 @@
+.addonContainer {
+    min-height: 15rem;
+    background-color: $uiWhite;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    border: $border;
+    border-radius: $borderRadius;
+
+    .parent {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    button {
+        padding: 0.5rem 0.75rem;
+        margin-top: 1rem;
+        bottom: 20px;
+    }
+}

@@ -1,0 +1,11 @@
+header {
+    background-color: $uiWhite;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: $border;
+    border-radius: $borderRadius;
+    
+    div.header {
+        text-transform: uppercase;
+    }
+}

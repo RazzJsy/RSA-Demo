@@ -1,0 +1,18 @@
+.main-layout {
+  width: 50vw;
+  margin: auto;
+
+  .content {
+    margin: 0 1rem;
+  }
+}
+
+.container {
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .container > div {
+    height:100px;
+    flex:400px;
+  }
