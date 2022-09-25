@@ -3,21 +3,19 @@ import React from 'react';
 const AddOn = ({props, index}) => {
 return (
     <React.Fragment>
-        <div>
-            <div className='addonContainer'>
-                <div className='parent'>
-                    <div>
-                        <h3>{props.title}</h3>
-                    </div>
-                    <div>
-                        {props.monthlyPrice}
-                    </div>
+        <div className='addon-container'>
+            <div className='addon-grid'>
+                <div>
+                    <h3>{props.title}</h3>
                 </div>
-                <div className='both'>
-                    {props.text}
+                <div className='addon-price'>
+                    £{props.monthlyPrice} per month
                 </div>
-                <button type="button">Select this extra</button>
             </div>
+            <div>
+                {props.text}
+            </div>
+            <button type="button">Select this extra</button>
         </div>
     </React.Fragment>
     );

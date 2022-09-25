@@ -1,6 +1,15 @@
 .main-layout {
-  width: 50vw;
+  width: 40vw;
   margin: auto;
+  font-size: 14px;
+
+  @media (min-width: 1080px) and (max-width: 2150px) {  
+    width: 75vw;
+  }
+
+  @media (max-width: 1080px) {  
+    width: 98vw;
+  }
 
   .content {
     margin: 0 1rem;

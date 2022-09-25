@@ -1,23 +1,38 @@
 body {
   background-color: $backgrounColour;
+  padding: 0;
+  margin: 0;
 }
 
-.App {
-    text-align: center;
+h1 {
+  font-weight: 400;
+  font-size: 48px;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 28px;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 24px;
+}
+
+button {
+  font-size: 9pt;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  background-color: $buttonColor;
+  border: $buttonBorder;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $buttonColorHover;
+    color: $uiWhite;
+    transition: 0.7s;
   }
-  
-  .App-header {
-    background-color: $backgrounColour;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-  .App-link {
-    color: $linkColour;
-  }
+}
   

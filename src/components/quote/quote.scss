@@ -1,0 +1,48 @@
+.quote-container {    
+    position: relative;
+    margin: 1rem 0 -0.5rem 0;
+    padding: 0.1rem;
+    border-radius: $borderRadius;
+
+    .quote-grid {
+        display: grid;        
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        @media (max-width: 1080px) {
+            grid-template-columns: 1fr;
+        }
+
+        h2 {
+            margin: 0;
+        }
+
+        .quote-details {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & > div {
+                margin-top: 1rem;
+            }
+        }
+
+        .quote-summary {
+            padding: 1rem;
+            background-color: $uiWhite;
+            border: $border;
+            border-radius: $borderRadius;
+            text-align: center;
+
+            .quote-summary-text {
+                margin: auto;
+                padding: 1rem 0;
+                width: 70%;
+            }
+
+            button {
+                width: 65%;
+            }
+        }
+    }
+}

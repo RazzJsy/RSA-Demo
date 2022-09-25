@@ -2,8 +2,13 @@ $uiWhite: #ffffff;
 $backgrounColour: #dddddd;
 $linkColour: #61dafb;
 
-$borderWidth: pxToRem(1px);
+$buttonBorder: 1px solid #aaaaaa;
+$buttonColor: #dddddd;
+$buttonColorHover: rgb(12, 132, 0);
+
 $borderColor: #aaaaaa;
-$borderRadius: 3px;
+
+$borderWidth: pxToRem(1px);
+$borderRadius: 2px;
 
 $border: $borderWidth solid $borderColor;
