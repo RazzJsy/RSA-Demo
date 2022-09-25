@@ -2,7 +2,7 @@ import React from 'react';
 import { concatAddress } from '../../functions/addresses';
 import { localDate } from '../../functions/dates';
 
-const Quote = ({props}) => {
+const Quote = ({props, price, isMonthly, onClick}) => {
 return (
     <React.Fragment>
         <div className='quote-container'>
@@ -14,10 +14,10 @@ return (
                     <div>Cover starts on {localDate(props.startDate)}</div>
                 </div>
                 <div className='quote-summary'>
-                    <h1>£{props.monthlyPrice}</h1>
-                    <h2>per month</h2>
+                    <h1>£{price}</h1>
+                    <h2>per {isMonthly ? 'month' : 'year'}</h2>
                     <div className='quote-summary-text'>This price includes Insurance Premium Tax at the current rate. No charge for paying monthly.</div>
-                    <button type="button">Switch to annual</button>
+                    <button type="button" onClick={onClick}>Switch to {isMonthly ? 'annualy' : 'monthly'}</button>
                 </div>
             </div>
         </div>

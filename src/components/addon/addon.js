@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AddOn = ({props, index}) => {
+const AddOn = ({props, index, isMonthly, isSelected, onClick}) => {
 return (
     <React.Fragment>
         <div className='addon-container'>
@@ -9,13 +9,13 @@ return (
                     <h3>{props.title}</h3>
                 </div>
                 <div className='addon-price'>
-                    £{props.monthlyPrice} per month
+                    £{isMonthly ? props.monthlyPrice + ' per month' : props.annualPrice + ' per year'}
                 </div>
             </div>
             <div>
                 {props.text}
             </div>
-            <button type="button">Select this extra</button>
+            <button type="button" className={isSelected ? 'selected' : ''} onClick={() => onClick(index)}>{isSelected ? 'Deselect' : 'Select'} this extra</button>
         </div>
     </React.Fragment>
     );

@@ -35,4 +35,15 @@ button {
     transition: 0.7s;
   }
 }
-  
+
+button.selected {    
+  background-color: $buttonColorHover;
+  color: $uiWhite;
+
+  &:hover {
+    cursor: pointer;
+    background-color: $buttonColor;
+    transition: 0.7s;
+    color: $uiBlack;
+  }
+}
