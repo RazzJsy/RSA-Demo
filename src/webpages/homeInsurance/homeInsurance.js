@@ -10,7 +10,7 @@ import AddOn from '../../components/addon/addon'
 const HomeInsurance = ({title}) => {
     const { setTitle } = useOutletContext();
     const [error, setError] = useState(null);
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false);
     const [isMonthly, setIsMonthly] = useState(true);
     const [quoteItems, setQuoteItems] = useState([]);
     const [quotePrice, setQuotePrice] = useState(0);
@@ -48,10 +48,10 @@ const HomeInsurance = ({title}) => {
               setQuoteItems(result[0][0]);
             }
             setAddonItems(addItemToArrayObjects(result[1], 'isSelected', false));
-            setIsLoading(true);
+            setIsLoaded(true);
         },
         (error) => {
-          setIsLoading(true);
+          setIsLoaded(true);
           setError(error);
         }
       );
@@ -63,7 +63,7 @@ const HomeInsurance = ({title}) => {
 
     if (error) {
       return <div>Error: {error.message}</div>;
-    } else if (!isLoading) {
+    } else if (!isLoaded) {
       return <div>Loading...</div>;
     } else {
       return (
