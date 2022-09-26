@@ -12,7 +12,7 @@ return (
                     £{isMonthly ? props.monthlyPrice + ' per month' : props.annualPrice + ' per year'}
                 </div>
             </div>
-            <div>
+            <div className='addon-text'>
                 {props.text}
             </div>
             <button type="button" className={isSelected ? 'selected' : ''} onClick={() => onClick(index)}>{isSelected ? 'Deselect' : 'Select'} this extra</button>
