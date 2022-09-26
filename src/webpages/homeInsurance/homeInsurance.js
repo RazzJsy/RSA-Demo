@@ -22,15 +22,15 @@ const HomeInsurance = ({title}) => {
       setQuotePrice(floatWithDecimalPlace((addonValue + price), 2));
     }
 
+    const quoteClick = (resp) => {
+      setIsMonthly(resp);
+      setQuotePrice(isMonthly ? quoteItems.annualPrice : quoteItems.monthlyPrice);
+    }
+
     const addonClick = (index) => {
       addonItems[index].isSelected = !addonItems[index].isSelected;
       setAddonItems(addonItems);
       calculateQuotePrice();
-    }
-
-    const quoteClick = () => {
-      setIsMonthly(!isMonthly);
-      setQuotePrice(isMonthly ? quoteItems.annualPrice : quoteItems.monthlyPrice);
     }
     
     useEffect(() => {

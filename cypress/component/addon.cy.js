@@ -1,20 +1,18 @@
 import AddOn from '../../src/components/addon/addon'
 
 describe('<AddOn>', () => {
+  let addonData;
 
-  let  index = 1;
-  let item = {
-    "title": "Accidental Damage Cover",
-    "text": "Do you need cover for mishaps to your home and contents, like drilling through a pipe or knocking over your TV?",
-    "monthlyPrice": 8.42,
-    "annualPrice": 101.00,
-    "isSelected": false
-  };
+  before(() => {
+    cy.fixture('addon').then((data) => {
+      addonData = data
+    });
+  });
 
   it('addon should load showing monthly details with button click', () => {
     const onAddonClickSpy = cy.spy().as('onAddonClickSpy');
 
-    cy.mount(<AddOn key={index} props={item} index={index} isMonthly={true} isSelected={item.isSelected} onClick={onAddonClickSpy} />);
+    cy.mount(<AddOn key={addonData.index} props={addonData.item} index={addonData.index} isMonthly={true} isSelected={addonData.item.isSelected} onClick={onAddonClickSpy} />);
 
     cy.get('h3').should('have.text', 'Accidental Damage Cover');
     cy.get('.addon-price').should('have.text', '£8.42 per month');
@@ -26,7 +24,7 @@ describe('<AddOn>', () => {
   });
 
   it('addon should load showing annual details', () => {
-    cy.mount(<AddOn key={index} props={item} index={index} isMonthly={false} isSelected={item.isSelected} />);
+    cy.mount(<AddOn key={addonData.index} props={addonData.item} index={addonData.index} isMonthly={false} isSelected={addonData.item.isSelected} />);
 
     cy.get('h3').should('have.text', 'Accidental Damage Cover');
     cy.get('.addon-price').should('have.text', '£101 per year');
@@ -35,7 +33,7 @@ describe('<AddOn>', () => {
   });
 
   it('addon should load showing monthly details and is selected', () => {
-    cy.mount(<AddOn key={index} props={item} index={index} isMonthly={true} isSelected={true} />);
+    cy.mount(<AddOn key={addonData.index} props={addonData.item} index={addonData.index} isMonthly={true} isSelected={true} />);
 
     cy.get('h3').should('have.text', 'Accidental Damage Cover');
     cy.get('.addon-price').should('have.text', '£8.42 per month');
