@@ -6,12 +6,12 @@ In addition to the main application the repository contains a suite of (Cypress)
 
 ## Installation
 
-Once you have cloned the repository, navigated to the root project directory (`/rsa-demo`) and run the following commands:
+Once you have cloned the repository, navigate to the root project directory (`/rsa-demo`) and run the following commands:
 
 #### `npm install`
 #### `npm start`
 
-##### `If running on a Linux or MacOs machine please edit the package.json file in the root director file with the following:`
+##### `If running on a Linux or MacOs machine please edit the package.json file in the root directory file with the following:`
 
 ```haskell
 replace: "set PORT=3001"
@@ -24,3 +24,23 @@ The application has been configured to load simultaneously both the mock-api and
 app: 3001
 api: 3002
 ```
+
+## Tests
+
+The solution contains tests for the main components:
+
+- addon
+- quote
+- header
+
+The test consume a fixed set of date defined in their relevant fixture *.json file (i.e. addon.json contains the data to populate the addon component).
+
+### Run the tests
+
+From the root directory type:
+
+#### `npx cypress open`
+
+In the window that opens select '*Component Testing*' and in the next window select your preferred browser (i.e. Chrome) and click '*Start Component Testing in ...*'.
+
+Once you have done this a browser window will open. In the browser window select '*Specs*' from the menu on the left and you will be presented with a list of components. Selecting each one will load the relevant tests for the selected component.

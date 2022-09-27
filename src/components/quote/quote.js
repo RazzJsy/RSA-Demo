@@ -17,7 +17,7 @@ return (
                     <h1>£{price}</h1>
                     <h2>per {isMonthly ? 'month' : 'year'}</h2>
                     <div className='quote-summary-text'>This price includes Insurance Premium Tax at the current rate. No charge for paying monthly.</div>
-                    <button type="button" onClick={() => onClick(!isMonthly)}>Switch to {isMonthly ? 'annually' : 'monthly'}</button>
+                    <button type="button" onClick={() => onClick(!isMonthly)}>Switch to {isMonthly ? 'annual' : 'monthly'}</button>
                 </div>
             </div>
         </div>
