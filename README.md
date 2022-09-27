@@ -12,8 +12,8 @@ Once you have cloned the repository, navigated to the root project directory (`/
 #### `If running on a Linux or MacOs machine please edit the package.json file in the root director file with the following:`
 
 ```haskell
-replace: "\"set PORT=3001 && react-scripts start\"
-with:    "\"PORT=3001 && react-scripts start\"
+replace: "set PORT=3001 && react-scripts start"
+with:    "PORT=3001 && react-scripts start"
 ```
 
 The application has be configured to load simultaneously both the mock-api and the application from the one command. This does however mean the ports are fixed (these can however be amended in package.json "start" parameter):
