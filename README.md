@@ -25,15 +25,17 @@ app: 3001
 api: 3002
 ```
 
+If the ports are changed then the relevant port will need to be updated in the code which are referenced in `./src/webpages/homeInsurance/homeInsurance.js`.
+
 ## Tests
 
 The solution contains tests for the main components:
 
 - addon
-- quote
 - header
+- quote
 
-The test consume a fixed set of date defined in their relevant fixture *.json file (i.e. addon.json contains the data to populate the addon component).
+The test consume a fixed set of date defined in their relevant fixtures *.json file (i.e. addon.json contains the data to populate the addon component tests).
 
 ### Run the tests
 
