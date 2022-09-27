@@ -1,4 +1,4 @@
-# RSA-Demo React Application + Tests
+# RSA-Demo Responsive React Application + Tests
 
 This project was created using React to meet the specified requirements laid out in the provided brief and wireframe.
 
