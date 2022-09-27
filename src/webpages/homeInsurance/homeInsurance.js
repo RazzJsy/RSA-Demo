@@ -36,8 +36,8 @@ const HomeInsurance = ({title}) => {
     useEffect(() => {
       setTitle(title)
       
-      let quoteApiRequest = fetch('http://localhost:3000/quote');
-      let addonApiRequest = fetch('http://localhost:3000/addons');
+      let quoteApiRequest = fetch('http://localhost:3002/quote');
+      let addonApiRequest = fetch('http://localhost:3002/addons');
       
       Promise.all([quoteApiRequest, addonApiRequest])
       .then(values => Promise.all(values.map(value => value.json())))

@@ -21,6 +21,6 @@ with:    "PORT=3001"
 The application has been configured to load simultaneously both the mock-api and the application from the one command (using [concurrently](https://www.npmjs.com/package/concurrently)). This does however mean the ports are fixed (these can however be amended in package.json "start" parameter):
 
 ```haskell
-api: 3000
 app: 3001
+api: 3002
 ```
