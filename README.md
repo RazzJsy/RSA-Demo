@@ -35,7 +35,7 @@ The solution contains tests for the main components:
 - header
 - quote
 
-The test consume a fixed set of date defined in their relevant fixtures *.json file (i.e. addon.json contains the data to populate the addon component tests).
+The test consume a fixed set of data defined in their relevant fixtures *.json file (i.e. addon.json contains the data to populate the addon component tests).
 
 ### Run the tests
 
